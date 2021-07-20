@@ -47,5 +47,9 @@ namespace Gaia::Reflection
          *  registered into this container.
          */
         const std::unordered_set<ReflectedElement*>& GetReflectedElements();
+
+    public:
+        /// Declare destructor virtual.
+        virtual ~ReflectedContainer() = default;
     };
 }

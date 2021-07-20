@@ -48,9 +48,9 @@ namespace Gaia::Reflection
         {
             return HostContainer;
         }
+
+    public:
+        /// Declare destructor virtual.
+        virtual ~ReflectedElement() = default;
     };
-
-
-
-
 }

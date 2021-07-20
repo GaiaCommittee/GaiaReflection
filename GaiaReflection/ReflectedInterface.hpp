@@ -14,6 +14,9 @@ namespace Gaia::Reflection
      */
     class ReflectedInterface
     {
+    public:
+        /// Declare destructor virtual.
+        virtual ~ReflectedInterface() = default;
     };
 
     namespace ReflectedClasses
