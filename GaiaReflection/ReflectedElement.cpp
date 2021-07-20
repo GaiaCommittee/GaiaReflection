@@ -16,7 +16,7 @@ namespace Gaia::Reflection
     }
 
     /// Constructor which will auto register itself to the container.
-    ReflectedElement::ReflectedElement(const std::initializer_list<std::string> &type_names,
+    ReflectedElement::ReflectedElement(const std::unordered_set<std::string> &type_names,
                                        ReflectedContainer *container)
     {
         if (container)

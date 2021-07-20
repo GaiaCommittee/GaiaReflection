@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <unordered_set>
 #include "ReflectedContainer.hpp"
 
 namespace Gaia::Reflection
@@ -38,7 +39,7 @@ namespace Gaia::Reflection
          *  This constructor should be invoked by derived class constructors, and parameters should be
          *  passed from there.
          */
-        ReflectedElement(const std::initializer_list<std::string>& type_names, ReflectedContainer* container);
+        ReflectedElement(const std::unordered_set<std::string> &type_names, ReflectedContainer* container);
 
         /**
          * @brief Get the host reflected container which this element is registered into.
