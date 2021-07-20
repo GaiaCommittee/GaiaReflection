@@ -11,6 +11,7 @@ namespace Gaia::Reflection
         if (container)
         {
             container->RegisterElement({type_name}, this);
+            HostContainer = container;
         } else throw Exceptions::NullPointerException("Reflected Container");
     }
 
@@ -21,6 +22,7 @@ namespace Gaia::Reflection
         if (container)
         {
             container->RegisterElement(type_names, this);
+            HostContainer = container;
         } else throw Exceptions::NullPointerException("Reflected Container");
     }
 }

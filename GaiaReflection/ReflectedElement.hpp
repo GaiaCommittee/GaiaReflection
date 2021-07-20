@@ -13,10 +13,7 @@ namespace Gaia::Reflection
     class ReflectedElement
     {
     private:
-        /**
-         * @brief The container which this element is registered into.
-         * @details This pointer will be initialized when this element is being registered into a container.
-         */
+        /// The container which this element is registered into.
         ReflectedContainer* HostContainer {nullptr};
 
     protected:
