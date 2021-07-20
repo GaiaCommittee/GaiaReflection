@@ -17,6 +17,9 @@ namespace Gaia::Reflection
         ReflectedContainer* HostContainer {nullptr};
 
     protected:
+        /// Default constructor for none reflection situation.
+        ReflectedElement() = default;
+
         /**
          * @brief Constructor which will auto register itself to the container.
          * @param type_name Type name of this element for container to categorize elements.
