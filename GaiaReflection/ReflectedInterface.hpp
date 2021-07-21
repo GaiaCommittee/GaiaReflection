@@ -26,7 +26,7 @@ namespace Gaia::Reflection
         {
         public:
             static void RegisterDerivedClass (
-                    const std::string& name, std::function<ReflectedInterface*()>& constructor)
+                    const std::string& name, std::function<InterfaceType*()>& constructor)
             {
                 InterfaceType::ReflectedClasses->emplace(name, constructor);
             }
@@ -60,8 +60,8 @@ namespace Gaia::Reflection
         ; \
     private: \
         static std::unordered_map<std::string, \
-            std::function<Gaia::Reflection::ReflectedInterface*()>> DerivedClasses; \
-    protected: \
+            std::function<InterfaceName*()>> DerivedClasses; \
+    public: \
         static const decltype(DerivedClasses)& GetDerivedClasses() {return DerivedClasses;}\
     private:
 #endif
