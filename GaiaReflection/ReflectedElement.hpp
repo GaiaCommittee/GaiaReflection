@@ -29,7 +29,7 @@ namespace Gaia::Reflection
          *  This constructor should be invoked by derived class constructors, and parameters should be
          *  passed from there.
          */
-        ReflectedElement(const std::string& type_name, ReflectedContainer* container);
+        ReflectedElement(ReflectedContainer *container, const std::string &type_name);
 
         /**
          * @brief Constructor which will auto register itself to the container.
@@ -39,7 +39,7 @@ namespace Gaia::Reflection
          *  This constructor should be invoked by derived class constructors, and parameters should be
          *  passed from there.
          */
-        ReflectedElement(const std::unordered_set<std::string> &type_names, ReflectedContainer* container);
+        ReflectedElement(ReflectedContainer *container, const std::unordered_set<std::string> &type_names);
 
         /**
          * @brief Get the host reflected container which this element is registered into.

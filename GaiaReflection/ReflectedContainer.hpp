@@ -28,7 +28,7 @@ namespace Gaia::Reflection
          * @param type_name Type names of the element to register.
          * @param element Pointer to the element.
          */
-        void RegisterElement(const std::unordered_set<std::string> &type_names, ReflectedElement* element);
+        void RegisterElement(ReflectedElement *element, const std::unordered_set<std::string> &type_names);
 
     protected:
         /**

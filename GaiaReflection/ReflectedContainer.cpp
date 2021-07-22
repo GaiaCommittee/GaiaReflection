@@ -16,7 +16,8 @@ namespace Gaia::Reflection
     }
 
     /// Register a reflected element into this container.
-    void ReflectedContainer::RegisterElement(const std::unordered_set<std::string> &type_names, ReflectedElement *element)
+    void
+    ReflectedContainer::RegisterElement(ReflectedElement *element, const std::unordered_set<std::string> &type_names)
     {
         for (const auto& type_name : type_names)
         {
